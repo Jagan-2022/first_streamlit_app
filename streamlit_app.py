@@ -34,9 +34,11 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"
 
 # Take the json version and normaize it
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-#Table displayed on the screen
-streamlit.dataframe(fruityvice_normalized)
+
 
 #Text search for api call
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
+
+#Table displayed on the screen
+streamlit.dataframe(fruityvice_normalized)
