@@ -62,7 +62,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_cho
 
 
 #Don't run anything past here while we troubleshoot
-streamlit.stop()
+#streamlit.stop()
 
 # Snowflake connector
 #import snowflake.connector
